@@ -12,7 +12,7 @@ class IndexController extends BaseController
 {
     public function index(){
 
-        $this->renderView();
+        return $this->renderView();
 
     }
 }
