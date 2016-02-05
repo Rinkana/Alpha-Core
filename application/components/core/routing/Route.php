@@ -6,10 +6,10 @@
  * Time: 13:03
  */
 
-namespace routing;
+namespace core\routing;
 
 
-use web\Request;
+use core\web\Request;
 
 class Route
 {
@@ -153,7 +153,18 @@ class Route
                 $pattern = self::DEFAULT_PATTERN;
 
                 if(array_key_exists($parameterName,$this->constraints)){
-                    $pattern = $this->constraints[$parameterName];
+
+                    switch(strtolower($this->constraints[$parameterName])){
+                        case "numeric":
+                            $pattern = "[0-9]+";
+                            break;
+                        case "any":
+                            $pattern = ".+";
+                            break;
+                        default:
+                            $pattern = $this->constraints[$parameterName];
+                    }
+
                 }
 
                 //Set and group

@@ -6,7 +6,7 @@
  * Time: 21:06
  */
 
-namespace web;
+namespace core\web;
 
 
 class Session

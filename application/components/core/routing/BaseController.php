@@ -6,10 +6,10 @@
  * Time: 17:53
  */
 
-namespace routing;
+namespace core\routing;
 
-use web\Request;
-use web\View;
+use core\web\Request;
+use core\web\View;
 
 abstract class BaseController
 {

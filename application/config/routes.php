@@ -5,11 +5,11 @@
  * Date: 19-Dec-15
  * Time: 16:50
  */
-use routing\Route;
+use core\routing\Route;
 
 //Todo: home different
 //Todo: set default regex consts
 return [
-    Route::get(":page","Index")->setConstraints(["page" => ".+"]),
+    Route::get(":page","Index")->setConstraints(["page" => "any"]),
     Route::get("","Index")
 ];

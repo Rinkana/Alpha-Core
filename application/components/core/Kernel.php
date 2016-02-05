@@ -8,9 +8,10 @@
 
 namespace core;
 
-use \routing\Router;
-use web\Request;
-use web\Response;
+use core\routing\RouteNotFoundException;
+use core\routing\Router;
+use core\web\Request;
+use core\web\Response;
 
 class Kernel
 {
@@ -52,9 +53,14 @@ class Kernel
     {
         $router = new Router();
 
-        $responseData = $router->route($this->request);
+        try{
+            $responseData = $router->route($this->request);
 
-        $this->response->setMessageBody($responseData);
+            $this->response->setMessageBody($responseData);
+        }catch(RouteNotFoundException $e){
+            $this->response->notFound();
+        }
+
     }
 
     /**

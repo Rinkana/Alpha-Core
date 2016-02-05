@@ -6,7 +6,7 @@
  * Time: 22:08
  */
 
-namespace database;
+namespace core\database;
 
 
 abstract class BaseCollector

@@ -1,6 +1,6 @@
 <?php
 return [
-    "method" => "sqlite",
+    "handler" => database\orm\handlers\Sqlite::class,
     "mysql" => array(
         "username" => "root",
         "password" => "",

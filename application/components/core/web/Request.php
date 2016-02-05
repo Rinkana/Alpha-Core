@@ -6,7 +6,7 @@
  * Time: 21:07
  */
 
-namespace web;
+namespace core\web;
 
 
 use helpers\ArrayBin;

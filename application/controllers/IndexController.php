@@ -6,11 +6,13 @@
  * Date: 19-Dec-15
  * Time: 17:53
  */
-use \routing\BaseController;
+use core\routing\BaseController;
 
 class IndexController extends BaseController
 {
-    public function index(){
+    public function index($page = ""){
+
+        var_dump($page);
 
         return $this->renderView();
 

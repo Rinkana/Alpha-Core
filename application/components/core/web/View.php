@@ -6,7 +6,7 @@
  * Time: 21:51
  */
 
-namespace web;
+namespace core\web;
 
 
 class View

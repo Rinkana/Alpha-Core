@@ -9,7 +9,7 @@ So what i want to create is a framework that has everything a framework needs in
 
 
 * It is made to be friendly with your IDE, so no odd references and no need for an ide-helper file.
-* It is made so that the developer can easly find what the framework actually does.
+* It is made so that the developer can easily find what the framework actually does.
 
 ### Version
 0.0.1

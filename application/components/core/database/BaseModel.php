@@ -6,8 +6,14 @@
  * Time: 17:09
  */
 
-namespace database;
+namespace core\database;
 
+/**
+ * Class BaseModel
+ * @package database
+ *
+ * The model is just a representation of a database table/row
+ */
 
 abstract class BaseModel
 {
@@ -32,4 +38,9 @@ abstract class BaseModel
     {
         $this->database = new Database();
     }*/
+
+    public function getFields()
+    {
+        return get_object_vars($this);
+    }
 }

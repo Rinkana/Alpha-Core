@@ -2,60 +2,34 @@
 /**
  * Created by IntelliJ IDEA.
  * User: max
- * Date: 09-Jan-16
- * Time: 14:35
+ * Date: 05-Feb-16
+ * Time: 22:21
  */
-
 namespace database\orm;
 
-use database\orm\types\CreateQuery;
-use database\orm\types\SelectQuery;
+use core\Config;
 
 class Query
 {
-    /*const MODE_SELECT = 1;
-    const MODE_UPDATE = 2;
-    const MODE_DELETE = 3;
-    const MODE_ALTER = 4;
-    const MODE_CREATE = 5;*/
-
     /**
-     * create a select query
-     *
-     * @param $fields
-     * @return Select
+     * @var String
      */
-    public static function select($fields = "*"){
-        $query = new SelectQuery($fields);
+    protected $modelName;
 
-        $query->selectFields($fields);
-
-        return $query;
+    public function __construct($modelName)
+    {
+        $this->modelName = $modelName;
     }
 
-    /**
-     * @param $table
-     */
-    public static function update($table){
+    public function where($field, $operator = "=", $value){
 
     }
 
-
-    public static function delete($table){
-
+    public function run(){
+        $handler = Config::get("database.handler");
     }
 
-    public static function alter($table){
-
-    }
-
-    public static function create($table){
-        $query = new CreateQuery($table);
-
-        return $query;
-    }
-
-    public static function raw(){
-
+    public static function find($modelName){
+        return new Query($modelName);
     }
 }

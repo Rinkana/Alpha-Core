@@ -6,11 +6,11 @@
  * Time: 16:50
  */
 
-namespace routing;
+namespace core\routing;
 
-use \core\Config;
+use core\Config;
 use helpers\ArrayBin;
-use \web\Request;
+use core\web\Request;
 
 class Router
 {
@@ -31,10 +31,10 @@ class Router
      *
      * @param Request $request
      * @return mixed
+     * @throws RouteNotFoundException
      */
     public function route(Request $request)
     {
-
         foreach($this->routes as $route){
             if($route->getMethod() == $request->getMethod()){
                 preg_match($route->parseRoute(),$request->getUrl(),$matches);
@@ -46,10 +46,11 @@ class Router
             }
         }
 
+        throw new RouteNotFoundException();
     }
 
 }
 
-class RouteNotValidException extends \Exception
-{
-}
+class RouteNotFoundException extends \Exception{}
+
+class RouteNotValidException extends \Exception{}
