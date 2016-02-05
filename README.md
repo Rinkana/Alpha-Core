@@ -1,6 +1,6 @@
-# AlphaCore
+# Lirith
 
-AlphaCore is a PHP framework with the primary goal to be logical for the programmer.
+Lirith is a PHP framework with the primary goal to be logical for the programmer.
 
 Many frameworks today make the use of too many "tools" that, in the end, makes the development of websites even harder.
 So what i want to create is a framework that has everything a framework needs in its core.
