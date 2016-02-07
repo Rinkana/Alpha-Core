@@ -6,49 +6,37 @@
  * Date: 26-Jan-16
  * Time: 21:47
  */
-class TerrainModel extends \database\BaseModel
+
+use \database\orm\Column;
+
+class IndexModel extends core\database\BaseModel
 {
-    /**
-     * @var int
-     */
-    private $positionX;
 
-    /**
-     * @var int
-     */
-    private $positionZ;
+    private $title;
+    private $text;
 
-    /**
-     * @return int
-     */
-    public function getPositionX()
+    public function __construct()
     {
-        return $this->positionX;
+        parent::__construct();
+
+        $this->table->addColumn(new Column("title",Column::STRING));
+        $this->table->addColumn(new Column("text",Column::TEXT));
     }
 
-    /**
-     * @param int $positionX
-     */
-    public function setPositionX($positionX)
-    {
-        $this->positionX = $positionX;
+    public function setTitle($title){
+        $this->title = $title;
     }
 
-    /**
-     * @return int
-     */
-    public function getPositionZ()
-    {
-        return $this->positionZ;
+    public function getTitle(){
+        return $this->title;
     }
 
-    /**
-     * @param int $positionZ
-     */
-    public function setPositionZ($positionZ)
-    {
-        $this->positionZ = $positionZ;
+    public function setText($text){
+        $this->text = $text;
     }
 
+    public function getText(){
 
+    }
+    
 }

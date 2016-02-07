@@ -12,7 +12,12 @@ class IndexController extends BaseController
 {
     public function index($page = ""){
 
-        var_dump($page);
+        $this->view->setData("page",$page);
+
+        $model = new IndexModel();
+        $reflector = new ReflectionClass('IndexModel');
+
+        var_dump( $model->getTable() );
 
         return $this->renderView();
 

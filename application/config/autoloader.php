@@ -7,5 +7,6 @@
  */
 return [
     ROOT."application/models",
+    ROOT."application/collectors",
     ROOT."application/controllers"
 ];
