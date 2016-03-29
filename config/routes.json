@@ -1,0 +1,5 @@
+{
+  "GET /" : "Index@Index",
+  "GET /assets/:asset" : "Index@Index",
+  "GET /favicon.ico" : "assets"
+}
