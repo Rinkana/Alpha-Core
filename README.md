@@ -1,9 +1,31 @@
 # Lirith
 
-Lirith is a Crystal framework with the primary goal to be logical for the programmer.
-It is somewhat based on rails but is more an experiment to get to know Crystal a bit better.
+TODO: Write a description here
 
-### Version
-0.0.1
+## Installation
 
-### Installation
+
+TODO: Write installation instructions here
+
+
+## Usage
+
+
+
+TODO: Write usage instructions here
+
+## Development
+
+TODO: Write development instructions here
+
+## Contributing
+
+1. Fork it ( https://github.com/Rinkana/Lirith/fork )
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create a new Pull Request
+
+## Contributors
+
+- [Rinkana](https://github.com/Rinkana) [Rinkana] - creator, maintainer
