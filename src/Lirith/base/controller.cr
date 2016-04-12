@@ -1,4 +1,4 @@
-class IndexController
+class BaseController
   def initialize
   end
 
@@ -9,7 +9,7 @@ class IndexController
 
   def asset(request, response)
     response.view = "test"
-    
+
     puts "Got asset request: " + request.path
   end
 

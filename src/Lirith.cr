@@ -1,7 +1,7 @@
-require "./Lirith/logger"
-require "./Lirith/routing"
-require "./Lirith/server"
-require "./Lirith/base/*"
-require "./Lirith/core"
+require "./lirith/logger"
+require "./lirith/routing"
+require "./lirith/server"
+require "./lirith/base/*"
+require "./lirith/core"
 
 include Lirith
