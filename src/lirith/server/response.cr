@@ -3,15 +3,17 @@ module Lirith
     class Response
 
       property :headers
+      property :content_type;
 
       property :view
 
       def initialize(@view)
-        puts "init response" + @view
+        @content_type = "text/plain"
+        #puts "init response" + @view
       end
 
       def render
-        puts "View:" + @view
+        return @view
       end
     end
   end

@@ -11,15 +11,16 @@ module Lirith
         #HTTP::Request.new
         #puts context.request
         request = Request.new(context.request)
-        #response = Response.new
+        response = Response.new(request.path)
+
         begin
-          @router.call(request)
+          @router.call(request, response)
         rescue
           Logger::Log.info("Route not found! " + request.to_s)
         end
 
-        context.response.content_type = "text/html"
-        context.response.print "<h1>Hello world! The time is #{Time.now}</h1>"
+        context.response.content_type = response.content_type
+        context.response.print response.render
       end
 
     end

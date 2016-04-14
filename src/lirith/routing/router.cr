@@ -21,13 +21,12 @@ module Lirith
         raise RouteNotFoundException.new(method + " " + path)
       end
 
-      def call(request : Server::Request)
+      def call(request : Server::Request, response : Server::Response) : Server::Response
         if route = find_route(request.method, request.path)
-          response = Server::Response.new(request.path)
           route.callback.call(request, response)
-          puts "YOLO: "
-          response.render
         end
+
+        response
       end
 
       def call(request : Server::Request, &block)
