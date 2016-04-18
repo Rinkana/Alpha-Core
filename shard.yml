@@ -5,3 +5,7 @@ authors:
   - Max Berends <max@maxberends.nl>
 
 license: MIT
+
+dependencies:
+  mime:
+    github: Rinkana/Crystal-MimeTypes
